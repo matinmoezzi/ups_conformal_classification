@@ -173,7 +173,7 @@ def get_model(modelname):
 
 def get_logits_targets(model, loader):
     # 1000 classes in Imagenet.
-    logits = torch.zeros((len(loader.dataset), 1000))
+    logits = torch.zeros((len(loader.dataset), 10))
     labels = torch.zeros((len(loader.dataset),))
     i = 0
     print(f'Computing logits for model (only happens once).')
